@@ -14,9 +14,9 @@ const Navbar = ({ setCatagory }) => {
           <div className="flex items-center justify-between h-16 relative">
 
             {/* Logo */}
-            <div className="flex-shrink-0 text-2xl font-bold text-emerald-400">
+            <a href='/' className="flex-shrink-0 text-2xl font-bold text-emerald-400">
               IOTA News
-            </div>
+            </a>
 
             {/* Center Nav Items */}
             <div className="hidden md:flex space-x-8 text-white">
