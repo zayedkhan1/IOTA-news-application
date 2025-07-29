@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 
 
-const Navbar = ({ setCatagory }) => {
+const Navbar = ({ setCatagory}) => {
   const [open, setOpen] = useState(false)
 
   return (
@@ -17,6 +17,19 @@ const Navbar = ({ setCatagory }) => {
             <a href='/' className="flex-shrink-0 text-2xl font-bold text-emerald-400">
               IOTA News
             </a>
+
+            {/* <div>
+           <label>
+        Select Country:{" "}
+        <select value={country} onChange={e => setCountry(e.target.value)}>
+          <option value="us">USA</option>
+          <option value="gb">UK</option>
+          <option value="in">India</option>
+          <option value="bd">Bangladesh</option>
+         
+        </select>
+      </label>
+            </div> */}
 
             {/* Center Nav Items */}
             <div className="hidden md:flex space-x-8 text-white">
@@ -72,5 +85,3 @@ const Navbar = ({ setCatagory }) => {
 };
 
 export default Navbar;
-//newsApI123
-//bfe1a957625e47ee81d493ef4c915acb
