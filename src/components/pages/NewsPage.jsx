@@ -3,21 +3,8 @@ import NewsItem from './NewsItem';
 
 const NewsPage = ({ category, }) => {
     const [articles, setArticles] = useState([]);
-  const [country, setCountry] = useState("us"); // default country
+  const [country, setCountry] = useState("us"); 
 
-
-    // useEffect(() => {
-        // let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`
-        // // let url=`https://newsapi.org/v2/top-headlines/sources?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`  
-        // fetch(url)
-        //     .then(res => res.json())
-        //     .then(data => setArticles(data.articles))
-  //new
-//     fetch(`http://localhost:5000/news.onrender.com/news?category=${category}&country=us`)
-//   .then(res => res.json())
-//   .then(data => {
-//     setArticles(data);
-//   });
 const fetchNew=()=>{
 fetch(`http://localhost:5000/news?category=${category}&country=${country}`)
     .then(res => res.json())
@@ -32,11 +19,11 @@ fetch(`http://localhost:5000/news?category=${category}&country=${country}`)
 };
  
 
-    // };, [category,country])
-    // console.log(articles)
+
     useEffect(() => {
    fetchNew()
   }, [country, category]);
+
     function capitalizeFirstLetter(str) {
         if (typeof str !== 'string' || str.length === 0) {
             return '';
